@@ -11,6 +11,7 @@ Each file has one job. Put new code where it belongs; don't grow `main.js`.
 | `model.js` | Item format (`parse`), status tables (`NEXT`, `ICON`). Pure. | Import `herdr`/`gpui-kit` or hold state. |
 | `cli.js` | `TodoCli`: installing `todo.sh` on a machine, running `todo <args>`, `err`. | Know about items, UI or the View. |
 | `repo.js` | Finding the repo: `currentFolder()`, `repoRoot()`. | Touch the todo list. |
+| `agents.js` | Starting a Claude tab for an item (`launch`), the task text, live agent status, "agent finished" detection. | Hold state or render. |
 | `view.js` | `renderPanel(state, handlers)` and row rendering. | Keep state, call `exec`, or mutate items. It reports intent through the `on` callbacks. |
 | `main.js` | The `GitTodo` View: state, timers, wiring the pieces together. | Hold format, transport or layout details. |
 | `todo.sh` | The only code that reads or writes the list file (locking, ids). | Be bypassed: the panel and Claude both go through it. |
